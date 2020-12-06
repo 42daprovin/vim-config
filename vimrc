@@ -14,7 +14,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'morhetz/gruvbox'
 
 "comandline Airline
-"Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline'
 
 "comandline lightline
 Plug 'itchyny/lightline.vim'
@@ -22,8 +22,14 @@ Plug 'itchyny/lightline.vim'
 "Syntax checker Synstastic
 Plug 'scrooloose/syntastic'
 
-"Should be illegal
+" Should be illegal
 Plug 'tpope/vim-fugitive'
+
+"comment with gcc
+Plug 'tpope/vim-commentary'
+
+"42 header
+Plug 'pandark/42header.vim'
 
 call plug#end()
 "---->Pluggin end
@@ -32,11 +38,13 @@ call plug#end()
 set wildmenu
 set number
 set mouse=a
+autocmd filetype c,cpp setlocal tabstop=4
+"Gruvbox config
 colorscheme gruvbox
-" Always show the status line
+set bg=dark
+set t_Co=256
+"Always show the status line
 set laststatus=2
-" Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 
 "---->Lightline config
 let g:lightline = {
