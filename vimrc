@@ -10,6 +10,9 @@ call plug#begin('~/.vim/plugged')
 "NERDtree
 Plug 'scrooloose/nerdtree'
 
+" NERDtree macro
+map <C-n> :NERDTreeToggle<CR>
+
 "colorscheme Gruvbox
 Plug 'morhetz/gruvbox'
 
@@ -35,9 +38,11 @@ call plug#end()
 "---->Pluggin end
 
 "Config
+set wildignorecase
 set wildmenu
 set number
 set mouse=a
+set shiftwidth=4
 autocmd filetype c,cpp setlocal tabstop=4
 "Gruvbox config
 colorscheme gruvbox
